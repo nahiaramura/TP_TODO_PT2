@@ -42,11 +42,9 @@
 }
 
 
-
-
 @font-face {
   font-family: 'titulo';
-  src: url('../fuentes/Bonello.otf') format('opentype');
+  src: url('~/fuentes/Bonello.otf') format('opentype');
   font-weight: normal;
 }
 
