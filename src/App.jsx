@@ -8,37 +8,15 @@ import './App.css'
 import './index.css'
 
 function App() {
-  const tareas = [
-    {
-      id: 1,
-      texto: "Terminar TP EFSI",
-      completada: false,
-      fechaCreacion: "2025-04-22",
-      fechaFinalizacion: null,
-    },
-    {
-      id: 2,
-      texto: "Estudiar matematica",
-      completada: true,
-      fechaCreacion: "2025-04-20",
-      fechaFinalizacion: "2025-04-21",
-    },
-    {
-      id: 3,
-      texto: "Comprar 3 bananas",
-      completada: false,
-      fechaCreacion: "2025-04-19",
-      fechaFinalizacion: null,
-    },
-  ];
 
   return (
+    
     <div className="todo-app">
       <div className="container mt-5 p-4 shadow">
-      <TodoForm />
-    </div>
+        <TodoForm />
       <FilterButtons />
-      <TodoList tareas={tareas} />
+      <TodoList /> 
+    </div>
     </div>
   );
 }

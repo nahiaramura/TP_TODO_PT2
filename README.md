@@ -1,12 +1,23 @@
-# React + Vite
+En lugar de crear un componente TodoApp.jsx, centralicé la estructura principal en el archivo App.jsx, y distribuí la interfaz en componentes reutilizables.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+src/
+├── components/
+│   ├── TodoForm.jsx        → Input para crear nuevas tareas
+│   ├── TodoList.jsx        → Lista completa de tareas
+│   ├── TodoItem.jsx        → Representación visual de una sola tarea
+│   ├── FilterButtons.jsx   → Filtros visuales + botón eliminar completadas y calcular rápida
+└── App.jsx                 → Componente principal que organiza la estructura
 
-Currently, two official plugins are available:
+- TodoForm.jsx: representa el formulario para crear tareas. Incluye el input de texto, pero el botón de añadir se separó en el componente Button.jsx para reutilización.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- TodoList.jsx: Renderiza una lista de TodoItems, recibe como prop la lista de tareas hardcodeadas.
 
-## Expanding the ESLint configuration
+- TodoItem.jsx: Muestra una tarea con su estado (pendiente o completada) y sus fechas.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- FilterButtons.jsx: Contiene los botones de filtros ("Todas", "Pendientes", "Completadas") y los botones de "Eliminar completadas" y "Calcular tarea más rápida". Es un bloque visual, no funcional.
+
+- App.jsx: tiene la estructura global de la app, organiza y distribuye los componentes. Simula los datos (tareas) mediante variables hardcodeadas.
+
+¿Por qué no usé TodoApp.jsx?
+- La estructura del proyecto es simple y no necesita encapsular más de lo que ya está en App.jsx.
+- Preferí tener un codigo mas claro y simple, dejando App.jsx como el centro de la interfaz.

@@ -5,11 +5,7 @@ function FilterButtons() {
     <div className="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
     <div className="d-flex align-items-center gap-2">
       <label htmlFor="filtro" className="mb-0">Mostrar:</label>
-      <select
-        id="filtro"
-        className="form-select form-select-sm"
-        disabled
-      >
+      <select id="filtro" className="form-select form-select-sm"  disabled>
         <option value="todas">Todas</option>
         <option value="completadas">Completadas</option>
         <option value="pendientes">Pendientes</option>
