@@ -10,7 +10,7 @@ import './index.css'
 function App() {
 
   return (
-    
+  <body>
     <div className="todo-app">
       <div className="container mt-5 p-4 shadow">
         <TodoForm />
@@ -18,6 +18,7 @@ function App() {
       <TodoList /> 
     </div>
     </div>
+    </body>
   );
 }
 
